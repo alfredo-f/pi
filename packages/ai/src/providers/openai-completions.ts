@@ -492,12 +492,61 @@ function createClient(
 				}
 			: headers;
 
-	return new OpenAI({
-		apiKey,
-		baseURL: isCloudflareProvider(model.provider) ? resolveCloudflareBaseUrl(model) : model.baseUrl,
-		dangerouslyAllowBrowser: true,
-		defaultHeaders,
-	});
+  // Copy to /Users/alfredo/.nvm/versions/node/v22.19.0/lib/node_modules/@earendil-works/pi-coding-agent/node_modules/@earendil-works/pi-ai/dist/providers/openai-completions.js
+  // ==========================================================================
+
+  let clientArgs = {
+    apiKey,
+    baseURL: isCloudflareProvider(model.provider) ? resolveCloudflareBaseUrl(model) : model.baseUrl,
+    dangerouslyAllowBrowser: true,
+    defaultHeaders,
+  };
+
+  const boolAddFetch = true;
+
+  if (boolAddFetch) {
+    const fetchToAdd = async (url, init) => {
+      const boolLogOnlyWhenError = true;
+      const boolLogRequest = true;
+      const boolLogResponse = true;
+
+      const response = await fetch(url, init);
+
+      if (!boolLogOnlyWhenError || (boolLogOnlyWhenError && !response.ok)) {
+        if (boolLogRequest) {
+          console.log("\n\n\n", "\n=== INTERCEPTED REQUEST BODY ===");
+          try {
+            // Attempt to parse and pretty-print the JSON body
+            const parsedBody = JSON.parse(init.body);
+            console.log(JSON.stringify(parsedBody, null, 2));
+          } catch (e) {
+            // Fallback to raw string if it's not JSON
+            console.log(init.body);
+          }
+          console.log("\n==================================\n", "\n\n\n");
+        }
+
+        if (boolLogResponse) {
+          try {
+            // Clone the response so the OpenAI SDK can still read it
+            const rawBody = await response.clone().text();
+            console.error("\n\n\n", "\n=== INTERCEPTED RAW ERROR BODY ===");
+            console.error("\n\n\n", rawBody);
+            console.error("\n\n\n", "==================================\n");
+          } catch (e) {
+            console.error("Failed to read raw error body", e);
+          }
+        }
+      }
+      return response;
+    }
+    clientArgs.fetch = fetchToAdd;
+  }
+
+  return new OpenAI(clientArgs);
+
+  // ==========================================================================
+
 }
 
 function buildParams(
