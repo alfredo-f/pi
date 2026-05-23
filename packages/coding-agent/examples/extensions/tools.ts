@@ -58,8 +58,13 @@ export default function toolsExtension(pi: ExtensionAPI) {
 			enabledTools = new Set(savedTools.filter((t: string) => allToolNames.includes(t)));
 			applyTools();
 		} else {
-			// No saved state - sync with currently active tools
-			enabledTools = new Set(pi.getActiveTools());
+			// No saved state - strictly whitelist core tools by default
+			const whitelist = ["read", "write", "edit", "bash"];
+			const availableTools = allTools.map((t) => t.name);
+
+			// Only enable tools that are both in our whitelist AND actually exist
+			enabledTools = new Set(whitelist.filter((t) => availableTools.includes(t)));
+			applyTools();
 		}
 	}
 
