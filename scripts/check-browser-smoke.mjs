@@ -46,6 +46,7 @@ try {
 		bundle: true,
 		platform: "browser",
 		format: "esm",
+		external: ["node:fs", "node:path"],
 		logLevel: "silent",
 		outfile: outputPath,
 		plugins: [generatedCatalogDataPlugin],

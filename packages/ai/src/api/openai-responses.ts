@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import OpenAI from "openai";
 import type { ResponseCreateParamsStreaming } from "openai/resources/responses/responses.js";
 import { clampThinkingLevel } from "../models.ts";
@@ -222,12 +224,76 @@ function createClient(
 		Object.assign(headers, optionsHeaders);
 	}
 
-	return new OpenAI({
+	// I used to copy this portion to /Users/alfredo/.nvm/versions/node/v22.22.3/lib/node_modules/@earendil-works/pi-coding-agent/node_modules/@earendil-works/pi-ai/dist/api/openai-responses.js
+	// ==========================================================================
+
+	const clientArgs: ConstructorParameters<typeof OpenAI>[0] = {
 		apiKey,
 		baseURL: model.baseUrl,
 		dangerouslyAllowBrowser: true,
 		defaultHeaders: headers,
-	});
+	};
+
+	const boolAddFetch = true;
+
+	if (boolAddFetch) {
+		const fetchToAdd: typeof fetch = async (url, init) => {
+			const boolLogOnlyWhenError = true;
+			const boolLogRequest = true;
+			const boolLogResponse = true;
+
+			const response = await fetch(url, init);
+
+			if (!boolLogOnlyWhenError || (boolLogOnlyWhenError && !response.ok)) {
+				const logDir = "/Users/alfredo/.pi/agent/logs_errors";
+				fs.mkdirSync(logDir, { recursive: true });
+				const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+				const logFile = path.join(logDir, `openai-responses-${timestamp}.log`);
+				let didWrite = false;
+
+				if (boolLogRequest) {
+					const rawInitBody = typeof init?.body === "string" ? init.body : "";
+					let requestLog: string;
+					try {
+						const parsedBody = JSON.parse(rawInitBody);
+						requestLog = JSON.stringify(parsedBody, null, 2);
+					} catch (_e) {
+						requestLog = rawInitBody;
+					}
+					fs.appendFileSync(
+						logFile,
+						`\n\n=== INTERCEPTED REQUEST BODY ===\n${requestLog}\n==================================\n`,
+					);
+					didWrite = true;
+				}
+
+				if (boolLogResponse) {
+					try {
+						const rawBody = await response.clone().text();
+						fs.appendFileSync(
+							logFile,
+							`\n\n=== INTERCEPTED RAW ERROR BODY ===\n${rawBody}\n==================================\n`,
+						);
+						didWrite = true;
+					} catch (e) {
+						fs.appendFileSync(logFile, `Failed to read raw error body: ${String(e)}\n`);
+						didWrite = true;
+					}
+				}
+
+				if (didWrite) {
+					console.error(logFile);
+          console.error("\n\n\n");
+				}
+			}
+			return response;
+		};
+		clientArgs.fetch = fetchToAdd;
+	}
+
+	return new OpenAI(clientArgs);
+
+	// ==========================================================================
 }
 
 function buildParams(model: Model<"openai-responses">, context: Context, options?: OpenAIResponsesOptions) {
