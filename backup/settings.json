@@ -1,0 +1,20 @@
+{
+  "lastChangelogVersion": "0.80.2",
+  "defaultProvider": "dbr-dev-gpt-5-4",
+  "defaultModel": "databricks-gpt-5-4",
+  "defaultThinkingLevel": "low",
+  "tools": [
+    "read",
+    "write",
+    "edit",
+    "bash"
+  ],
+  "packages": [
+    "npm:pi-agent-browser-native"
+  ],
+  "retry": {
+    "maxRetries": 50,
+    "baseDelayMs": 1030
+  },
+  "theme": "dark"
+}
