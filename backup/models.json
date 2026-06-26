@@ -1,0 +1,370 @@
+{
+  "providers": {
+    "dbr-dev-sonnet-4-6": {
+      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_DEV",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-sonnet-4-6",
+          "name": "dev--databricks-claude-sonnet-4-6",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false
+          }
+        }
+      ]
+    },
+    "dbr-prod-sonnet-4-6": {
+      "baseUrl": "https://adb-851065078234030.10.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_PROD",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-sonnet-4-6",
+          "name": "prod--databricks-claude-sonnet-4-6",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false
+          }
+        }
+      ]
+    },
+    "dbr-dev-sonnet-4-5": {
+      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_DEV",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-sonnet-4-5",
+          "name": "dev--databricks-claude-sonnet-4-5",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false
+          }
+        }
+      ]
+    },
+    "dbr-prod-sonnet-4-5": {
+      "baseUrl": "https://adb-851065078234030.10.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_PROD",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-sonnet-4-5",
+          "name": "prod--databricks-claude-sonnet-4-5",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false
+          }
+        }
+      ]
+    },
+    "dbr-dev-haiku-4-5": {
+      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_DEV",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-haiku-4-5",
+          "name": "dev--databricks-claude-haiku-4-5",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false
+          }
+        }
+      ]
+    },
+    "dbr-dev-opus-4-6": {
+      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_DEV",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-opus-4-6",
+          "name": "dev--databricks-claude-opus-4-6",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false
+          }
+        }
+      ]
+    },
+    "dbr-prod-opus-4-6": {
+      "baseUrl": "https://adb-851065078234030.10.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_PROD",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-opus-4-6",
+          "name": "prod--databricks-claude-opus-4-6",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false
+          }
+        }
+      ]
+    },
+    "dbr-dev-opus-4-8": {
+      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_DEV",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-opus-4-8",
+          "name": "dev--databricks-claude-opus-4-8",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": false,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false,
+            "supportsStrictMode": false
+          }
+        }
+      ]
+    },
+    "dbr-prod-opus-4-8": {
+      "baseUrl": "https://adb-851065078234030.10.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_PROD",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-opus-4-8",
+          "name": "prod--databricks-claude-opus-4-8",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": false,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false,
+            "supportsStrictMode": false
+          }
+        }
+      ]
+    },
+    "dbr-stage-opus-4-8": {
+      "baseUrl": "https://adb-1157061131355019.19.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_STAGE",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-opus-4-8",
+          "name": "stage--databricks-claude-opus-4-8",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": false,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false,
+            "supportsStrictMode": false
+          }
+        }
+      ]
+    },
+    "dbr-stage-sonnet": {
+      "baseUrl": "https://adb-1157061131355019.19.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_STAGE",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-sonnet-4-6",
+          "name": "stage--databricks-claude-sonnet-4-6",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false
+          }
+        }
+      ]
+    },
+    "dbr-stage-opus-4-6": {
+      "baseUrl": "https://adb-1157061131355019.19.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_STAGE",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-opus-4-6",
+          "name": "stage--databricks-claude-opus-4-6",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false
+          }
+        }
+      ]
+    },
+    "dbr-dev-opus-4-7": {
+      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_DEV",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-opus-4-7",
+          "name": "dev--databricks-claude-opus-4-7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false,
+            "forceAdaptiveThinking": true
+          }
+        }
+      ]
+    },
+    "dbr-prod-opus-4-7": {
+      "baseUrl": "https://adb-851065078234030.10.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_PROD",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-opus-4-7",
+          "name": "prod--databricks-claude-opus-4-7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false,
+            "forceAdaptiveThinking": true
+          }
+        }
+      ]
+    },
+    "dbr-dev-gpt-5-4": {
+      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_DEV",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-gpt-5-4",
+          "name": "dev--databricks-gpt-5-4",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": false,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false,
+            "requiresOpenAiCompatibleToolIdSanitization": true
+          }
+        }
+      ]
+    }
+  }
+}
