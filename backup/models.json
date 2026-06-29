@@ -168,6 +168,56 @@
         }
       ]
     },
+    "dbr-dev-opus-4-8": {
+      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_DEV",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-opus-4-8",
+          "name": "dev--databricks-claude-opus-4-8",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": false,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false,
+            "supportsStrictMode": false
+          }
+        }
+      ]
+    },
+    "dbr-prod-opus-4-8": {
+      "baseUrl": "https://adb-851065078234030.10.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_PROD",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-claude-opus-4-8",
+          "name": "prod--databricks-claude-opus-4-8",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false,
+            "supportsStrictMode": false
+          }
+        }
+      ]
+    },
     "dbr-stage-sonnet": {
       "baseUrl": "https://adb-1157061131355019.19.azuredatabricks.net/serving-endpoints",
       "api": "openai-completions",
@@ -266,152 +316,6 @@
         }
       ]
     },
-    "dbr-dev-opus-4-8": {
-      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
-      "api": "openai-completions",
-      "apiKey": "$DATABRICKS_TOKEN_DEV",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "databricks-claude-opus-4-8",
-          "name": "dev--databricks-claude-opus-4-8",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "compat": {
-            "supportsDeveloperRole": false,
-            "supportsReasoningEffort": true,
-            "maxTokensField": "max_tokens",
-            "supportsStore": false,
-            "forceAdaptiveThinking": true
-          }
-        }
-      ]
-    },
-    "dbr-prod-opus-4-8": {
-      "baseUrl": "https://adb-851065078234030.10.azuredatabricks.net/serving-endpoints",
-      "api": "openai-completions",
-      "apiKey": "$DATABRICKS_TOKEN_PROD",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "databricks-claude-opus-4-8",
-          "name": "prod--databricks-claude-opus-4-8",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "compat": {
-            "supportsDeveloperRole": false,
-            "supportsReasoningEffort": true,
-            "maxTokensField": "max_tokens",
-            "supportsStore": false,
-            "forceAdaptiveThinking": true
-          }
-        }
-      ]
-    },
-    "dbr-dev-gpt-5-2-codex": {
-      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
-      "api": "openai-responses",
-      "apiKey": "$DATABRICKS_TOKEN_DEV",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "databricks-gpt-5-2-codex",
-          "name": "dev--databricks-gpt-5-2-codex",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "compat": {
-            "supportsDeveloperRole": false,
-            "supportsReasoningEffort": true,
-            "maxTokensField": "max_tokens",
-            "supportsStore": false
-          }
-        }
-      ]
-    },
-    "dbr-prod-gpt-5-2-codex": {
-      "baseUrl": "https://adb-851065078234030.10.azuredatabricks.net/serving-endpoints",
-      "api": "openai-responses",
-      "apiKey": "$DATABRICKS_TOKEN_PROD",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "databricks-gpt-5-2-codex",
-          "name": "prod--databricks-gpt-5-2-codex",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "compat": {
-            "supportsDeveloperRole": false,
-            "supportsReasoningEffort": true,
-            "maxTokensField": "max_tokens",
-            "supportsStore": false
-          }
-        }
-      ]
-    },
-    "dbr-dev-gpt-5-3-codex": {
-      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
-      "api": "openai-responses",
-      "apiKey": "$DATABRICKS_TOKEN_DEV",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "databricks-gpt-5-3-codex",
-          "name": "dev--databricks-gpt-5-3-codex",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "compat": {
-            "supportsDeveloperRole": false,
-            "supportsReasoningEffort": true,
-            "maxTokensField": "max_tokens",
-            "supportsStore": false
-          }
-        }
-      ]
-    },
-    "dbr-prod-gpt-5-3-codex": {
-      "baseUrl": "https://adb-851065078234030.10.azuredatabricks.net/serving-endpoints",
-      "api": "openai-responses",
-      "apiKey": "$DATABRICKS_TOKEN_PROD",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "databricks-gpt-5-3-codex",
-          "name": "prod--databricks-gpt-5-3-codex",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "compat": {
-            "supportsDeveloperRole": false,
-            "supportsReasoningEffort": true,
-            "maxTokensField": "max_tokens",
-            "supportsStore": false
-          }
-        }
-      ]
-    },
     "dbr-dev-gpt-5-4": {
       "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
       "api": "openai-responses",
@@ -430,174 +334,6 @@
           "compat": {
             "supportsDeveloperRole": false,
             "supportsReasoningEffort": true,
-            "maxTokensField": "max_tokens",
-            "supportsStore": false
-          }
-        }
-      ]
-    },
-    "dbr-prod-gpt-5-4": {
-      "baseUrl": "https://adb-851065078234030.10.azuredatabricks.net/serving-endpoints",
-      "api": "openai-responses",
-      "apiKey": "$DATABRICKS_TOKEN_PROD",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "databricks-gpt-5-4",
-          "name": "prod--databricks-gpt-5-4",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "compat": {
-            "supportsDeveloperRole": false,
-            "supportsReasoningEffort": true,
-            "maxTokensField": "max_tokens",
-            "supportsStore": false
-          }
-        }
-      ]
-    },
-    "dbr-dev-gpt-5-5": {
-      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
-      "api": "openai-responses",
-      "apiKey": "$DATABRICKS_TOKEN_DEV",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "databricks-gpt-5-5",
-          "name": "dev--databricks-gpt-5-5",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "compat": {
-            "supportsDeveloperRole": false,
-            "supportsReasoningEffort": true,
-            "maxTokensField": "max_tokens",
-            "supportsStore": false
-          }
-        }
-      ]
-    },
-    "dbr-prod-gpt-5-5": {
-      "baseUrl": "https://adb-851065078234030.10.azuredatabricks.net/serving-endpoints",
-      "api": "openai-responses",
-      "apiKey": "$DATABRICKS_TOKEN_PROD",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "databricks-gpt-5-5",
-          "name": "prod--databricks-gpt-5-5",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "compat": {
-            "supportsDeveloperRole": false,
-            "supportsReasoningEffort": true,
-            "maxTokensField": "max_tokens",
-            "supportsStore": false
-          }
-        }
-      ]
-    },
-    "dbr-dev-gpt-5-5-pro": {
-      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
-      "api": "openai-responses",
-      "apiKey": "$DATABRICKS_TOKEN_DEV",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "databricks-gpt-5-5-pro",
-          "name": "dev--databricks-gpt-5-5-pro",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "compat": {
-            "supportsDeveloperRole": false,
-            "supportsReasoningEffort": true,
-            "maxTokensField": "max_tokens",
-            "supportsStore": false
-          }
-        }
-      ]
-    },
-    "dbr-prod-gpt-5-5-pro": {
-      "baseUrl": "https://adb-851065078234030.10.azuredatabricks.net/serving-endpoints",
-      "api": "openai-responses",
-      "apiKey": "$DATABRICKS_TOKEN_PROD",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "databricks-gpt-5-5-pro",
-          "name": "prod--databricks-gpt-5-5-pro",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "compat": {
-            "supportsDeveloperRole": false,
-            "supportsReasoningEffort": true,
-            "maxTokensField": "max_tokens",
-            "supportsStore": false
-          }
-        }
-      ]
-    },
-    "dbr-dev-gemini-3-5-flash": {
-      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
-      "api": "openai-completions",
-      "apiKey": "$DATABRICKS_TOKEN_DEV",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "databricks-gemini-3-5-flash",
-          "name": "dev--databricks-gemini-3-5-flash",
-          "reasoning": false,
-          "input": [
-            "text"
-          ],
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "compat": {
-            "supportsDeveloperRole": false,
-            "supportsReasoningEffort": false,
-            "maxTokensField": "max_tokens",
-            "supportsStore": false
-          }
-        }
-      ]
-    },
-    "dbr-prod-gemini-3-5-flash": {
-      "baseUrl": "https://adb-851065078234030.10.azuredatabricks.net/serving-endpoints",
-      "api": "openai-completions",
-      "apiKey": "$DATABRICKS_TOKEN_PROD",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "databricks-gemini-3-5-flash",
-          "name": "prod--databricks-gemini-3-5-flash",
-          "reasoning": false,
-          "input": [
-            "text"
-          ],
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "compat": {
-            "supportsDeveloperRole": false,
-            "supportsReasoningEffort": false,
             "maxTokensField": "max_tokens",
             "supportsStore": false
           }
