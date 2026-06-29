@@ -318,7 +318,7 @@
     },
     "dbr-dev-gpt-5-4": {
       "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
-      "api": "openai-responses",
+      "api": "openai-completions",
       "apiKey": "$DATABRICKS_TOKEN_DEV",
       "authHeader": true,
       "models": [
@@ -333,9 +333,10 @@
           "maxTokens": 16384,
           "compat": {
             "supportsDeveloperRole": false,
-            "supportsReasoningEffort": true,
+            "supportsReasoningEffort": false,
             "maxTokensField": "max_tokens",
-            "supportsStore": false
+            "supportsStore": false,
+            "requiresOpenAiCompatibleToolIdSanitization": true
           }
         }
       ]
