@@ -210,7 +210,7 @@
           "maxTokens": 16384,
           "compat": {
             "supportsDeveloperRole": false,
-            "supportsReasoningEffort": true,
+            "supportsReasoningEffort": false,
             "maxTokensField": "max_tokens",
             "supportsStore": false,
             "supportsStrictMode": false
