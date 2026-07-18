@@ -72,6 +72,10 @@ cd "pi-${VERSION}"
 
 The script installs dependencies, builds the monorepo, compiles the Bun executable, and stages its runtime assets. Package maintainers who provide dependencies separately can pass `--skip-install --skip-deps`.
 
+```
+cd /Users/alfredo/PyCharmMiscProject/pi && npm install --ignore-scripts && npm run build && npm link -w @earendil-works/pi-coding-agent
+```
+
 ## Supply-chain hardening
 
 We treat npm dependency changes as reviewed code changes.
