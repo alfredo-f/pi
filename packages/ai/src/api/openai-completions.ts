@@ -1051,9 +1051,9 @@ export function convertMessages(
 				);
 			const assistantText = assistantTextParts.map((part) => part.text).join("");
 
-			const nonEmptyThinkingBlocks = msg.content
-				.filter(isThinkingContentBlock)
-				.filter((block) => block.thinking.trim().length > 0);
+			const nonEmptyThinkingBlocks = compat.dropReasoningOnReplay
+				? []
+				: msg.content.filter(isThinkingContentBlock).filter((block) => block.thinking.trim().length > 0);
 			if (nonEmptyThinkingBlocks.length > 0) {
 				if (compat.requiresThinkingAsText) {
 					// Convert thinking blocks to plain text (no tags to avoid model mimicking them)
@@ -1114,6 +1114,7 @@ export function convertMessages(
 				}
 			}
 			if (
+				!compat.dropReasoningOnReplay &&
 				compat.requiresReasoningContentOnAssistantMessages &&
 				model.reasoning &&
 				(assistantMsg as { reasoning_content?: string }).reasoning_content === undefined
@@ -1367,6 +1368,7 @@ function detectCompat(model: Model<"openai-completions">): ResolvedOpenAIComplet
 		requiresAssistantAfterToolResult: false,
 		requiresThinkingAsText: false,
 		requiresReasoningContentOnAssistantMessages: isDeepSeek,
+		dropReasoningOnReplay: false,
 		thinkingFormat: isDeepSeek
 			? "deepseek"
 			: isZai
@@ -1418,6 +1420,7 @@ function getCompat(model: Model<"openai-completions">): ResolvedOpenAICompletion
 		requiresReasoningContentOnAssistantMessages:
 			model.compat.requiresReasoningContentOnAssistantMessages ??
 			detected.requiresReasoningContentOnAssistantMessages,
+		dropReasoningOnReplay: model.compat.dropReasoningOnReplay ?? detected.dropReasoningOnReplay,
 		thinkingFormat: model.compat.thinkingFormat ?? detected.thinkingFormat,
 		openRouterRouting: model.compat.openRouterRouting ?? {},
 		vercelGatewayRouting: model.compat.vercelGatewayRouting ?? detected.vercelGatewayRouting,

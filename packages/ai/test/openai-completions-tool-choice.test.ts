@@ -1252,6 +1252,7 @@ describe("openai-completions tool_choice", () => {
 				requiresAssistantAfterToolResult: false,
 				requiresThinkingAsText: false,
 				requiresReasoningContentOnAssistantMessages: false,
+				dropReasoningOnReplay: false,
 				thinkingFormat: "openai",
 				openRouterRouting: {},
 				vercelGatewayRouting: {},

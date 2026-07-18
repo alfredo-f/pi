@@ -26,6 +26,10 @@
 - Changed generated model catalogs to keep TypeScript model shapes separate from ignored JSON model values, reducing generated source churn ([#6765](https://github.com/earendil-works/pi/pull/6765) by [@mitsuhiko](https://github.com/mitsuhiko)).
 - Changed model generation to validate ignored provider data before compilation; `npm run build` refreshes model data as before, while `npm run build:offline` reuses existing data without network access.
 
+### Added
+
+- Added `compat.dropReasoningOnReplay` for OpenAI-compatible Chat Completions to omit reasoning/thinking from replayed assistant messages, for endpoints that emit `reasoning_content` on output but reject it on input (e.g. Databricks-hosted Claude).
+
 ### Fixed
 
 - Fixed stored API-key credentials to apply their provider-scoped `env` values during auth resolution, including Amazon Bedrock profiles ([#6864](https://github.com/earendil-works/pi/pull/6864) by [@cristinaponcela](https://github.com/cristinaponcela)).

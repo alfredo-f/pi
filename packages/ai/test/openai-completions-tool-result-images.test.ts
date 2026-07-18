@@ -31,6 +31,7 @@ const compat: Omit<Required<OpenAICompletionsCompat>, "deferredToolsMode"> & {
 	requiresAssistantAfterToolResult: false,
 	requiresThinkingAsText: false,
 	requiresReasoningContentOnAssistantMessages: false,
+	dropReasoningOnReplay: false,
 	thinkingFormat: "openai",
 	openRouterRouting: {},
 	vercelGatewayRouting: {},

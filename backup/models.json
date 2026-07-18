@@ -19,7 +19,8 @@
             "supportsDeveloperRole": false,
             "supportsReasoningEffort": true,
             "maxTokensField": "max_tokens",
-            "supportsStore": false
+            "supportsStore": false,
+            "dropReasoningOnReplay": true
           }
         }
       ]
@@ -43,7 +44,8 @@
             "supportsDeveloperRole": false,
             "supportsReasoningEffort": true,
             "maxTokensField": "max_tokens",
-            "supportsStore": false
+            "supportsStore": false,
+            "dropReasoningOnReplay": true
           }
         }
       ]
@@ -67,7 +69,8 @@
             "supportsDeveloperRole": false,
             "supportsReasoningEffort": true,
             "maxTokensField": "max_tokens",
-            "supportsStore": false
+            "supportsStore": false,
+            "dropReasoningOnReplay": true
           }
         }
       ]
@@ -91,7 +94,8 @@
             "supportsDeveloperRole": false,
             "supportsReasoningEffort": true,
             "maxTokensField": "max_tokens",
-            "supportsStore": false
+            "supportsStore": false,
+            "dropReasoningOnReplay": true
           }
         }
       ]
@@ -115,7 +119,8 @@
             "supportsDeveloperRole": false,
             "supportsReasoningEffort": true,
             "maxTokensField": "max_tokens",
-            "supportsStore": false
+            "supportsStore": false,
+            "dropReasoningOnReplay": true
           }
         }
       ]
@@ -139,7 +144,8 @@
             "supportsDeveloperRole": false,
             "supportsReasoningEffort": true,
             "maxTokensField": "max_tokens",
-            "supportsStore": false
+            "supportsStore": false,
+            "dropReasoningOnReplay": true
           }
         }
       ]
@@ -163,7 +169,8 @@
             "supportsDeveloperRole": false,
             "supportsReasoningEffort": true,
             "maxTokensField": "max_tokens",
-            "supportsStore": false
+            "supportsStore": false,
+            "dropReasoningOnReplay": true
           }
         }
       ]
@@ -188,7 +195,8 @@
             "supportsReasoningEffort": false,
             "maxTokensField": "max_tokens",
             "supportsStore": false,
-            "supportsStrictMode": false
+            "supportsStrictMode": false,
+            "dropReasoningOnReplay": true
           }
         }
       ]
@@ -213,7 +221,8 @@
             "supportsReasoningEffort": false,
             "maxTokensField": "max_tokens",
             "supportsStore": false,
-            "supportsStrictMode": false
+            "supportsStrictMode": false,
+            "dropReasoningOnReplay": true
           }
         }
       ]
@@ -238,7 +247,8 @@
             "supportsReasoningEffort": false,
             "maxTokensField": "max_tokens",
             "supportsStore": false,
-            "supportsStrictMode": false
+            "supportsStrictMode": false,
+            "dropReasoningOnReplay": true
           }
         }
       ]
@@ -262,7 +272,8 @@
             "supportsDeveloperRole": false,
             "supportsReasoningEffort": true,
             "maxTokensField": "max_tokens",
-            "supportsStore": false
+            "supportsStore": false,
+            "dropReasoningOnReplay": true
           }
         }
       ]
@@ -286,7 +297,8 @@
             "supportsDeveloperRole": false,
             "supportsReasoningEffort": true,
             "maxTokensField": "max_tokens",
-            "supportsStore": false
+            "supportsStore": false,
+            "dropReasoningOnReplay": true
           }
         }
       ]
@@ -311,7 +323,8 @@
             "supportsReasoningEffort": true,
             "maxTokensField": "max_tokens",
             "supportsStore": false,
-            "forceAdaptiveThinking": true
+            "forceAdaptiveThinking": true,
+            "dropReasoningOnReplay": true
           }
         }
       ]
@@ -336,7 +349,8 @@
             "supportsReasoningEffort": true,
             "maxTokensField": "max_tokens",
             "supportsStore": false,
-            "forceAdaptiveThinking": true
+            "forceAdaptiveThinking": true,
+            "dropReasoningOnReplay": true
           }
         }
       ]
