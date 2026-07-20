@@ -59,6 +59,11 @@ export default function (pi: ExtensionAPI) {
 	pi.on("before_provider_request", (event, _ctx) => {
 		const payload = event.payload as Record<string, any>;
 
+		if (payload.model && typeof payload.model === "string" && payload.model.includes("gpt-5-6")) {
+			payload.reasoning_effort = "none";
+			return payload;
+		}
+
 		if (payload.model && typeof payload.model === "string" && payload.model.includes("databricks-claude")) {
 			payload.max_tokens = 64000;
 
