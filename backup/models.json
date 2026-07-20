@@ -379,6 +379,31 @@
           }
         }
       ]
+    },
+    "dbr-dev-gpt-5-6-sol": {
+      "baseUrl": "https://adb-3179436993731139.19.azuredatabricks.net/serving-endpoints",
+      "api": "openai-completions",
+      "apiKey": "$DATABRICKS_TOKEN_DEV",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "databricks-gpt-5-6-sol",
+          "name": "dev--databricks-gpt-5-6-sol",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 200000,
+          "maxTokens": 16384,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": false,
+            "maxTokensField": "max_tokens",
+            "supportsStore": false,
+            "requiresOpenAiCompatibleToolIdSanitization": true
+          }
+        }
+      ]
     }
   }
 }
